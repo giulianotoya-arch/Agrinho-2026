@@ -1,0 +1,208 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E RESET
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f4f7f4;
+}
+
+/* ==========================================================================
+   2. CABEÇALHO E MENU DE NAVEGAÇÃO
+   ========================================================================== */
+header {
+    background-color: #1e4620; /* Verde escuro institucional */
+    color: #ffffff;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #a3d9a5;
+    margin-bottom: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #2e6932;
+}
+
+/* ==========================================================================
+   3. SEÇÕES DE CONTEÚDO (LAYOUT)
+   ========================================================================== */
+section {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    color: #1e4620;
+    border-bottom: 2px solid #8eb890;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+section p {
+    margin-bottom: 1rem;
+}
+
+/* Estilização das Listas */
+section ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+section li {
+    margin-bottom: 0.5rem;
+    color: #4a4a4a;
+}
+
+/* Customização específica para Destaques */
+#inicio {
+    border-left: 5px solid #2e6932;
+}
+
+#inicio p:last-of-type {
+    font-style: italic;
+    font-weight: bold;
+    color: #2e6932;
+    background-color: #e8f5e9;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Alternância visual para a seção de Problemas Ambientais */
+#problemas h2 {
+    color: #8b0000; /* Vermelho escuro para alertar sobre problemas */
+    border-bottom-color: #ffcccc;
+}
+
+/* ==========================================================================
+   4. FORMULÁRIO DE CONTATO
+   ========================================================================== */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin-top: 1.5rem;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #2e6932;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1.2rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2e6932;
+    box-shadow: 0 0 5px rgba(46, 105, 50, 0.3);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button {
+    background-color: #2e6932;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1e4620;
+}
+
+/* ==========================================================================
+   5. RODAPÉ
+   ========================================================================== */
+footer {
+    background-color: #112912;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 3rem;
+    font-size: 1rem;
+}
+
+footer p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   6. RESPONSIVIDADE (Design adaptável para Celulares)
+   ========================================================================== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    nav a {
+        display: block;
+        background-color: #2e6932;
+    }
+
+    section {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+}
