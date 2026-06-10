@@ -1,0 +1,178 @@
+/* Reset padrão para garantir consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis do projeto: Cores e Fontes */
+:root {
+    --verde-principal: #2E7D32; /* Verde folha (sustentabilidade) */
+    --verde-claro: #E8F5E9;     /* Fundo suave */
+    --tecnologia-escuro: #263238; /* Grafite escuro (modernidade/texto) */
+    --detalhe-laranja: #EF6C00;   /* Cor de destaque para botões/links (sol/energia) */
+    --branco: #FFFFFF;
+    --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    color: var(--tecnologia-escuro);
+    background-color: var(--branco);
+    line-height: 1.6;
+}
+/* Cabeçalho e Menu de Navegação */
+header {
+    background-color: var(--branco);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--verde-principal);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--tecnologia-escuro);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--verde-principal);
+}
+
+/* Seção Hero (Destaque Principal) */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('caminho-da-sua-imagem.jpg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--branco);
+    padding: 0 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+/* Botão de Ação (Call to Action) */
+.btn-principal {
+    background-color: var(--detalhe-laranja);
+    color: var(--branco);
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-principal:hover {
+    background-color: #D84315;
+}
+   /* Container Geral de Conteúdo */
+.container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.titulo-secao {
+    text-align: center;
+    color: var(--verde-principal);
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+
+/* Grid de Tecnologias/Sustentabilidade */
+.grid-recursos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--verde-claro);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--verde-principal);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--verde-principal);
+    margin-bottom: 1rem;
+}
+footer {
+    background-color: var(--tecnologia-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+/* Configurações para Celulares e Tablets */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-menu {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .container {
+        margin: 2rem auto;
+    }
+}
