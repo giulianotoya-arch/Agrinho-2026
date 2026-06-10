@@ -1,12 +1,10 @@
-/* Reset padrão para garantir consistência entre navegadores */
-* {
+ {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Variáveis do projeto: Cores e Fontes */
-:root {
+ {
     --verde-principal: #2E7D32; /* Verde folha (sustentabilidade) */
     --verde-claro: #E8F5E9;     /* Fundo suave */
     --tecnologia-escuro: #263238; /* Grafite escuro (modernidade/texto) */
